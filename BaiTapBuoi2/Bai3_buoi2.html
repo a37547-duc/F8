@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+
+    <style>
+      .input_flex {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 15px;
+      }
+      .Subject {
+        margin-bottom: 15px;
+      }
+      .button {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Get in touch with us by filling contact form below</h2>
+    <!-- Begin div flex -->
+    <div class="input_flex">
+      <div class="Email">
+        <input
+          class="input_email"
+          type="text"
+          value=""
+          placeholder="*Enter your full name"
+        />
+      </div>
+      <div class="EmailAd">
+        <input
+          class="input_emailad"
+          type="email"
+          value=""
+          placeholder="*Enter your email address"
+        />
+      </div>
+    </div>
+    <!-- End div flex -->
+
+    <!-- Begin div flex2 -->
+    <div class="input_flex2">
+      <div class="Subject">
+        <input
+          class="input_sub"
+          type="text"
+          value=""
+          placeholder="*Enter your subject"
+        />
+      </div>
+      <div class="Message">
+        <textarea
+          name="message"
+          placeholder="* Your message here"
+          id=""
+          cols="47"
+          rows="10"
+        ></textarea>
+      </div>
+    </div>
+    <!-- End div flex2 -->
+
+    <!-- Begin div button -->
+    <div class="button">
+      <button type="submit">Send message</button>
+      <label for="Filltext"
+        >* Please fill all require form field, thanks!</label
+      >
+    </div>
+    <!-- End div button -->
+  </body>
+</html>
