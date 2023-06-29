@@ -1,0 +1,35 @@
+body {
+  color: aliceblue;
+}
+.form_content {
+  background: darkslategray;
+  padding-left: 15px;
+}
+h2 {
+  font-size: 30px;
+  padding-top: 10px;
+  margin: 0;
+}
+
+span {
+  color: orange;
+}
+form {
+  padding-bottom: 15px;
+}
+input,
+button {
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 65px;
+}
+.form_content:hover input::placeholder,
+.form_content:hover input {
+  color: orange;
+  background-color: #ddd;
+}
+.form_content:hover button {
+  color: #ddd;
+  background: orange;
+}
