@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section {
+  margin: 0;
+  padding-top: 0;
+  width: 700px;
+  /* border: 2px solid rgb(53, 20, 200); */
+  height: 800px;
+}
+.form-group {
+  /* width: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-group,
+.textarea-group {
+  width: 80%;
+  margin: 20px 20px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: "Lobster", cursive;
+}
+p {
+  font-size: 17px;
+  font-weight: 400;
+  color: #b1b0b0;
+  margin-bottom: 20px;
+}
+span {
+  color: red;
+}
+h1,
+p {
+  margin-left: 70px;
+}
+
+input {
+  border: 2px solid #dcdcdc;
+  padding: 5px 10px 5px 50px;
+  margin-left: 10px;
+  font-size: 15px;
+  line-height: 30px;
+  outline: 0;
+  display: block;
+  width: 100%;
+}
+
+.icon-left {
+  font-size: 25px;
+  width: 50px;
+  left: 0px;
+  color: white;
+  background: rgb(220, 220, 220);
+}
+.icon-right {
+  right: 10px;
+  font-size: 10px;
+  color: rgb(220, 220, 220);
+}
+.form-group .icon-pop {
+  right: 10px;
+  font-size: 10px;
+  color: rgb(220, 220, 220);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+.icon-left,
+.icon-right,
+.icon-pop,
+.tooltip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  top: 0px;
+  cursor: pointer;
+}
+
+/* CSS TOOLTIPS */
+.tooltip {
+  cursor: pointer;
+  padding: 7px;
+  top: -70px;
+  left: 120px;
+  display: none;
+}
+.tooltipText {
+  padding: 20px;
+  font-size: 15px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: white;
+  white-space: nowrap;
+}
+
+.tooltipText::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: 15px solid;
+  border-color: #000 transparent transparent transparent;
+}
+/* Kết thúc sử dụng TOOLTIPS */
+
+.textarea-group textarea {
+  height: 20em;
+  width: 45em;
+  margin-left: 48px;
+  padding-left: 15px;
+  padding-top: 15px;
+  border: 2px solid #dcdcdc;
+}
+.textarea-group .icon-left i,
+.textarea-group .icon-right i {
+  /* border: 2px solid black; */
+  margin-top: -210px;
+}
+.textarea-group .icon-pop {
+  margin-top: -105px;
+}
+.textarea-group textarea::placeholder {
+  font-size: 15px;
+}
+
+/* Begin CSS submit_icn_btn */
+.submit_icn_btn {
+  width: 80%;
+  display: flex;
+  /* border: 2px solid black; */
+  position: relative;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.submit_icn_btn input[type="checkbox"] {
+  transform: scale(1.7);
+  position: absolute;
+  right: 45%;
+}
+
+.submit_icn_btn label {
+  position: absolute;
+  right: 52%;
+  color: #b1b0b0;
+}
+.submit_icn_btn button {
+  position: absolute;
+  left: 80%;
+  font-size: 15px;
+  padding: 10px 35px 10px 35px;
+  background: rgb(233, 62, 50);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+/* End CSS submit_icn_btn */
+
+/* CSS focus icon-right, icon-pop */
+input:focus ~ .icon-right,
+textarea:focus ~ .icon-right {
+  display: none; /* Ẩn phần tử .icon-right khi input được focus */
+}
+
+input:focus ~ .icon-pop,
+textarea:focus ~ .icon-pop {
+  opacity: 1;
+  visibility: visible;
+  color: #b1b0b0; /* Hiển thị phần tử .icon-pop khi input được focus */
+}
+input:focus ~ .tooltip {
+  display: block;
+}
+/* Kết thúc CSS icon-right, icon-pop */
+
+/* CSS hover */
+.input-group:hover .icon-left,
+.textarea-group:hover .icon-left {
+  color: white;
+  background: black;
+  border: 2px solid black;
+}
+.input-group:hover input,
+.textarea-group:hover textarea {
+  border: 2px solid black;
+}
+/* Kết thúc CSS hover */

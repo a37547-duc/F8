@@ -1,0 +1,54 @@
+@import url("");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.accordion {
+  max-width: 800px;
+}
+.accordion .contentBx {
+  position: relative;
+  margin: 10px 20px;
+}
+.accordion .contentBx .label {
+  position: relative;
+  padding: 20px 40px 20px 40px;
+  background: rgb(216, 89, 36);
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.accordion .contentBx .label::before {
+  content: "+";
+  font-size: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 10px;
+}
+.accordion .contentBx:active .label::before {
+  content: "-";
+}
+.accordion .contentBx .content {
+  position: relative;
+  background: white;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+  overflow-y: auto;
+  font-size: 1.2em;
+}
+.accordion .contentBx:active .content {
+  height: 150px;
+  padding: 10px;
+}
