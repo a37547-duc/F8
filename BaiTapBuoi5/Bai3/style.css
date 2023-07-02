@@ -84,6 +84,7 @@ body {
   color: #9b9b9b;
   /* border: 2px solid black; */
   padding: 10px;
+  text-align: center;
 }
 .blog-text a {
   margin-top: 25px;
