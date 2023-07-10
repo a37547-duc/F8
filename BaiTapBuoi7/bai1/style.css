@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Asap", sans-serif;
+}
+
+/* .container {
+  position: relative;
+} */
+
+.background {
+  display: block;
+  position: relative;
+}
+.background img {
+  width: 1000px;
+  height: 500px;
+}
+
+.content {
+  width: 565px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.776);
+  position: absolute;
+  left: 185px;
+  top: 140px;
+  border-radius: 3px;
+}
+
+.info-content {
+  margin: 35px 30px;
+}
+
+h1 {
+  color: #bf4240;
+  margin: 12px auto;
+}
+
+.text {
+  font-size: 0.7em;
+}
+
+.Address {
+  margin-top: 20px;
+}
+.Address i {
+  color: black;
+}
+
+.info-price {
+  font-family: SFU, serif;
+  background-color: #bf4240;
+  padding: 10px;
+  width: 125px;
+  color: white;
+  border-radius: 5%;
+  position: absolute;
+  right: 30px;
+  bottom: -20px;
+  text-align: center;
+}
