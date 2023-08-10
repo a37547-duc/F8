@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  border: 1px solid green;
+  margin-top: 50px;
+  height: 400px;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  background: green;
+  margin: 0 auto;
+  transition: all 0.5s linear;
+  transform-origin: center bottom;
+  scale: 1 0;
+}
+.container:hover .box {
+  /* 1. Nghiêng */
+
+  /* transform: rotate(45deg); */
+  /* rotate: 180deg; */
+  /* transform: rotateX(-45deg); */
+  /* transform: rotateY(45deg); */
+
+  /* 2. Phóng to, thu nhỏ */
+
+  /* transform: scale(1.5, 1.2); */
+  /* X là 1.5 Y là 1.2 */
+  /* scale: 0.9 1.2; */
+  /* transform: scaleX(1.5); */
+  /* transform: rotateX(5deg) scaleX(1.5); */
+  /* rotate: 5deg;
+  scale: 1.2; */
+  /* lớn hơn 1 phóng to, nhỏ hơn 1 thu nhỏ */
+
+  /* 3 Nghiêng */
+
+  /* transform: skewX(20deg); */
+  /* Thực tế chỉ nghiêng 1 hướng */
+  /* Nếu có chữ nằm trong cũng sẽ bị nghiêm theo
+  Để giải quyết thì phải dùng before hoặc after */
+
+  /* 4. Di chuyển */
+
+  /* transform: translate(100px, 100px);
+  translate: 100px 100px ; */
+  /* transform: translateX(100px); */
+  /* position và translate chỉ giống nhau khi đơn vị không phải là % */
+  /* positon: left, top,... phải có giá trị ban đầu thì mới di chuyển đc, còn không thì nó sẽ dịch chuyển */
+  scale: 1 1;
+  transform-origin: center bottom;
+}

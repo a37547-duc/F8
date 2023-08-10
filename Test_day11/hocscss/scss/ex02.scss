@@ -1,0 +1,71 @@
+/*
+Comment CSS
+
+*/
+// Comment SCSS
+
+// Biến trong SCSS
+// $primaryColor: green;
+// $secondaryColor: red;
+// $headerBackgroundColor: grey;
+// Đặt tên theo cú pháp camelCase
+
+@import "parts/variable";
+
+.header {
+  $padding: 10px; // Biến cục bộ
+  background-color: $primaryColor;
+  .header-inner {
+    padding: $padding $padding + 5px;
+    .logo {
+      max-width: 150px;
+      overflow: hidden;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .menu {
+      background: green;
+      > ul {
+        display: flex;
+        + li {
+          &.itemP {
+            flex: 1 0 auto;
+            text-decoration: none;
+            &:hover {
+              color: red;
+            }
+          }
+          &::before {
+            content: "";
+          }
+        }
+      }
+    }
+  }
+}
+
+// Nếu nó là giá trị thuộc tính thì các bạn gọi thẳng ra
+// Nhưng những trường hợp còn lại thì phải dùng cú pháp như thế này
+$copyrightSelector: ".copyright";
+$property: color;
+$size: 20;
+$selector1: col;
+$selector2: 2;
+.footer {
+  padding: 20px 0;
+  #{$copyrightSelector} {
+    text-align: center;
+    // $property: grey;// thì sẽ không hiện ra đc
+    // vậy nếu muôn thể hiện property là thuộc tính css thì ta phải
+    #{$property}: grey;
+    // font-size: #{$size}%;
+    // % là ký tự đặc biệt của SCSS
+    font-size: $size + 0%;
+  }
+  //Nếu muốn nối thành .col-2
+  #{"." + $selector1 + "-" + $selector2} {
+    width: 50px;
+  }
+}

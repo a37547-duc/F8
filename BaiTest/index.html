@@ -1,0 +1,105 @@
+#include <bits/stdc++.h> using namespace std; #define ll long long const int MOD
+= 1e9 + 7; vector<int>
+  parent, size; void makeSet(int n) { for (int i = 1; i <= n; i++) { parent[i] =
+  i; size[i] = 1; } } int find(int v) { if (v == parent[v]) return v; return
+  parent[v] = find(parent[v]); } void _union(int a, int b) { a = find(a); b =
+  find(b); if (a != b) { if (size[a] < size[b]) swap(a, b); parent[b] = a;
+  size[a] += size[b]; } } int main() { ios::sync_with_stdio(0); cin.tie(0); int
+  n, m; cin >> n >> m; parent= vector<int>
+    (n + 1); size= vector<int>
+      (n + 1); vector<long long>
+        f(n + 1); f[0] = 1; for (int i = 1; i <= n; ++i) { f[i] = f[i - 1] * i;
+        f[i] %= MOD; } makeSet(n); while (m--) { int a, b; cin >> a >> b;
+        _union(a, b); } vector<int>
+          cnt(n + 1); ll power = 0; for (int i = 0; i <= n; ++i) { int root=
+          find(i); cnt[root] += 1; } for (int i = 0; i <= n; ++i) { if (cnt[i] >
+          2) power += f[cnt[i]]; power %= MOD; } cout << power; return 0;
+          <!-- } -->
+          #include<iostream>
+            #include<map>
+              using namespace std; class QuickWeigt{ private: int *id,*sz; int
+              size; public: QuickWeigt( int N){ size=N; id=new int[N]; sz=new
+              int[N]; for (int i = 0; i < N; i++){ id[i] = i; sz[i]=1; } } int
+              root(int i){ while(i!=id[i]) i=id[i]; return i; } bool
+              connected(int p,int q){ return root(p)==root(q); } void Union(int
+              p,int q){ int i=root(p); int j =root(q); if(i==j)return;
+              if(sz[i]<sz[j]){id[i]
+                ="j;sz[j]+"
+                ="sz[i];}"
+                else{id[j]="i;sz[i]+"
+                ="sz[j];}"
+                }
+                int
+                getSize(int
+                p){
+                return
+                sz[root(p)];
+                }
+                };
+                <!--
+                --
+              >
+                int main(){ // t.Union(3,8); // t.Union(3,4); // t.Union(5,4);
+                // cout<<t.getsize(4); int line; cin
+                  >>line; map<string,int>
+                    mp; QuickWeigt t(100000); int id=0; for(int i =0; i<line
+                      ;i++){
+                      string
+                      name,name2;
+                      cin
+                      >>name>>name2; if(mp.count(name) ==0){ mp[name]=id++; }
+                      if(mp.count(name2) ==0){ mp[name2]=id++; }
+                      t.Union(mp[name],mp[name2]);
+                      cout<<t.getSize(mp[name])<<endl; } } <!-- -->
+                        #include <bits/stdc++.h> using namespace std;
+                        map<string, string>
+                          id; map<string, string>
+                            lead; map<string, int>
+                              ranks; map<string, int>
+                                sz; vector<string>
+                                  names; map<string, bool>
+                                    checked; vector<string>
+                                      clubs; int n, m; string root(string i) {
+                                      while (i != id[i]) { i = id[i]; } return
+                                      i; } bool connected(string p, string q) {
+                                      return root(p) == root(q); } void
+                                      unionFunc(string p, string q){ string i =
+                                      root(p); string j = root(q); if (i == j)
+                                      return; if (sz[i] < sz[j]) { id[i] = j;
+                                      sz[j] += sz[i]; } else { id[j] = i; sz[i]
+                                      += sz[j]; } } int main() { cin >> n; int
+                                      currentRank = 0; for(int i = 1; i <= n;
+                                      i++) { string p, q; cin >> p >> q; if
+                                      (id.find(p) == id.end()) { id[p] = p;
+                                      sz[p] = 1; ranks[p] = currentRank; lead[p]
+                                      = p; currentRank++; names.push_back(p); }
+                                      if (id.find(q) == id.end()) { id[q] = q;
+                                      sz[q] = 1; ranks[q] = currentRank; lead[q]
+                                      = q; currentRank++; names.push_back(q); }
+                                      unionFunc(p, q); } for(auto name : names)
+                                      { string r = root(name); if(ranks[lead[r]]
+                                      > ranks[name]) { lead[r] = name; }
+                                      if(!checked[r]) { clubs.push_back(r);
+                                      checked[r] = true; } } cout <<
+                                      clubs.size() << endl; for(auto club :
+                                      clubs) { cout << lead[club] << ' ' <<
+                                      sz[club] << endl; } return 0; }
+                                    </string></string,
+                                  ></string
+                                ></string,
+                              ></string,
+                            ></string,
+                          ></string,
+                        ></t.getSize(mp[name])<<endl;
+                      ></line
+                    ></string,int
+                  ></t.getsize(4);
+                ></sz[j]){id[i]
+              ></map
+            ></iostream
+          ></int
+        ></long
+      ></int
+    ></int
+  ></int
+>

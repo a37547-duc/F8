@@ -1,0 +1,9 @@
+/*xử lý trang khung  */
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  /* overflow-x: hidden;
+  overflow-y: hidden; */
+  overflow-y: scroll;
+}

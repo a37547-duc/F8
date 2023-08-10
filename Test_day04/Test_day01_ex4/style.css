@@ -1,0 +1,33 @@
+/* EX 01 
+Chọn tất cả thẻ a nào có thuộc tính target*/
+/* .website a[target] {
+  color: aquamarine;
+} */
+
+/* Ex 02 chọn thẻ a có giá trị */
+/* .website a[href="https://fullstack.edu.vn/"]
+{
+  color: blue;
+} */
+
+/*EX 03 chọn tất cả các link của f8  */
+/* .website a[href ^="https://fullstack.edu.vn/"]
+{
+  color: red;
+} */
+
+/* .website a[href*="https://fullstack.edu.vn"]
+{
+  color: brown;
+} */
+
+/* Ex 04 Lấy đuôi jpg */
+.images a[href$="jpg"] {
+  color: rgb(226, 43, 43);
+}
+
+/* Class cũng là 1 attribute */
+/* EX05 */
+[class*="item-"] {
+  border: 1px solid red;
+}

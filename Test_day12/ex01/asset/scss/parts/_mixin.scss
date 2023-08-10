@@ -1,0 +1,74 @@
+//Grid system
+// TỐI ƯU CHUYỂN HÓA THÀNH MIXIN
+
+$container-width: 1200px;
+$column-space: 20px;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 calc((-1) * $column-space/2);
+}
+.row [class^="col-"] {
+  $column-number: calc(12 / var(--column-size));
+  $column-width: calc(100% / $column-number);
+  flex-basis: $column-width;
+  max-width: $column-width;
+  padding: 0 calc($column-space/2);
+}
+
+@mixin column($name: "") {
+  @for $i from 1 through 12 {
+    $prefix: ".col-";
+
+    @if ($name != "") {
+      $prefix: $prefix + $name + "-";
+    }
+    #{$prefix + $i} {
+      --column-size: #{$i};
+    }
+  }
+}
+
+@include column();
+$breakpoints: (
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+  xxl: 1400,
+);
+
+@each $name, $breakpoint in $breakpoints {
+  @media screen and (min-width: #{$breakpoint}px) {
+    @include column($name);
+  }
+}
+
+/////////////////////////////////////////////////////////////
+/// MIXIN CENTER
+
+@mixin center($type) {
+  @if ($type==display) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } @else if($type==position) {
+    position: relative;
+    > * {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  } @else if($type==text) {
+    text-align: center;
+    > * {
+      display: inline-block;
+      text-align: left;
+    }
+  } @else if($type==margin) {
+    > * {
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/* .box {
+  border: 5px solid red;
+  width: 350px;
+  margin: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+} */
+/* box-sizing: content-box; */
+
+/* Kích thước thực phụ  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.products {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0;
+  border: 1px solid black;
+}
+.product {
+  display: inline-block;
+  border: 1px solid blue;
+  width: 33.33%;
+  padding: 50px;
+  font-size: 1rem;
+}

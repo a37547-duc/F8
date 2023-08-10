@@ -1,0 +1,40 @@
+/* Các thành phần con này phải nằm trong cùng 1 thẻ cha */
+/* .products h2:first-child {
+  color: red;
+}
+.products h2:last-child {
+  color: red;
+}
+
+.products .item:last-child {
+  color: blue;
+} */
+
+/* first-of-type phụ thuộc vào tên thẻ chứ không phải selector */
+/* Thường dùng để kiểm tra khác kiểu */
+/* .products h2.item:first-of-type {
+  color: red;
+}
+.products .item:last-of-type {
+  color: red;
+} */
+
+/* Chọn bài viết 5, số thứ tự bắt đầu từ 1 */
+/* .posts h2:nth-child(5) {
+  color: blue;
+} */
+
+/*Chọn ra các số chắn  */
+/* .posts h2:nth-child(2n + 2) {
+  color: blue;
+} */
+
+/*Chọn ra các số chắn  */
+/* .posts h2:nth-child(2n + 1) {
+  color: blue;
+} */
+
+/* nth-of-type */
+.posts h2:nth-of-type(2n + 2) {
+  color: red;
+}

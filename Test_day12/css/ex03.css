@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/* 
+Vòng lặp for through
+=> xác định số lần lặp đã biết trước
+*/
+.col-small {
+  width: 50;
+}
+
+.col-medium {
+  width: 60;
+}
+
+.col-large {
+  width: 80;
+}
+
+/*# sourceMappingURL=ex03.css.map */

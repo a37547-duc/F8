@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  width: 300px;
+  margin: 30px auto;
+  border: 1px solid red;
+  /* color: aliceblue; */
+  /* overflow: auto; */
+}
+/* Sử dụng after */
+.box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Thuộc tính clear */
+.col-1 {
+  width: 100px;
+  height: 100px;
+  background: red;
+  color: aliceblue;
+  float: left;
+}
+.col-2 {
+  width: 100px;
+  height: 50px;
+  background: rgb(83, 22, 205);
+  color: aliceblue;
+  float: left;
+}
+.text {
+  clear: both;
+}
+.text-1 {
+  /* padding: 40px;
+  float: left; */
+}
+
+/* Tạo ra 1 class clearfix */
+.clearfix {
+  clear: both;
+}

@@ -1,0 +1,17 @@
+.text {
+  font-style: normal;
+  font-weight: normal;
+  /* letter-spacing: 3px;
+  word-spacing: 15px; */
+  text-indent: 50px;
+}
+/* Cách viết kết hợp  text-decoration*/
+h2 a {
+  text-decoration: underline overline line-through;
+  text-transform: capitalize;
+  text-transform: none;
+}
+/* Xuống dòng đoạn văn bản */
+.content {
+  word-wrap: break-word;
+}

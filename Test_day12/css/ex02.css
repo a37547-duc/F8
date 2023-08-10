@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* 
+Kế thừa trong SCSS
+
+1.extend
+
+@extend selector
+
+2.placeholder
+- Trong placeholder chỉ có thuộc tính và values
+- Những đoạn code css nào dùng nhiều thì nhóm vào placeholder
+- Mixin gọi ở đâu thì đoạn code hiển thị ở đó
+- Định nghĩa placeholder
+
+%tenplaceholder {
+    thuoctinh1: value1;
+    thuoctinh2: value2;
+}
+
+- Gọi placeholder
+@extend %tenplaceholder
+
+3. mixin
+-- Nên tạo 1 tách thành 1 file khác
+3.1 mixin Không có tham số
+
+@mixin tenmixin{
+    // Nội dung mixin
+}
+
+3.2 mixin có tham số
+
+@mixin tenmixin($thamso1, $thamso2,.....)
+{
+    //Nội dung mixin
+}
+
+- Gọi mixin
+@include tenmixin
+
+@include tenmixin(doiso1, doiso2,....)
+
+*/
+.container {
+  background: gray;
+}
+
+.products {
+  text-align: center;
+}
+.products > * {
+  display: inline-block;
+  text-align: left;
+}
+.products div {
+  width: 200px;
+  border: 1px solid black;
+}
+
+/*# sourceMappingURL=ex02.css.map */

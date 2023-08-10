@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.box {
+  width: 300px;
+  margin: 30px auto;
+
+  border: 1px solid black;
+}
+.box ul {
+  /* list-style-position: inside;
+  list-style-type: decimal-leading-zero; */
+  list-style: inside lower-alpha;
+}
+
+.songs {
+  width: 300px;
+  margin: 40px;
+  border: 1px solid black;
+}
+.songs h2 {
+  display: list-item;
+  list-style: inside decimal-leading-zero;
+}

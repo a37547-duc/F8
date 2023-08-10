@@ -1,0 +1,19 @@
+/* .content {
+  font-size: 30px;
+} */
+
+/* .content p {
+  font-size: 1.5em;
+} */
+/* % Không sử dụng cho cỡ chữ */
+/* .content p {
+  font-size: 1.5rem;
+} */
+
+/*  */
+html {
+  font-size: 18px;
+}
+body {
+  font-size: 1.2rem;
+}

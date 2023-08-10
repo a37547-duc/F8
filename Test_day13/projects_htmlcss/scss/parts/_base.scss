@@ -1,0 +1,26 @@
+// Gỉa sử trong grid container-width trùng với bản thiết kế figma
+// Thi không được sửa trong grid mà phải sửa trong base
+// Ta ghi đè container
+
+.container {
+  --container-width: 1200px;
+}
+
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: end;
+}
+.align-items-start {
+  align-items: start;
+}

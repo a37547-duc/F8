@@ -1,0 +1,25 @@
+/*
+Khai báo biến
+1. Biến toàn cục (global Variable)
+2. Biến cục bộ (Local Variable)
+ /*Khai báo cục bộ : root  */
+
+:root {
+  --primary-color: rgb(83, 98, 150);
+  --secondary-color: blue;
+  --font-family: Roboto, sans-serif;
+  --border-color: red;
+}
+body {
+  color: var(--primary-color);
+}
+.box {
+  --border-color: blue;
+  border: 1px solid var(--border-color);
+  --font-size: larger;
+  font-size: var(--font-size);
+}
+.box:hover {
+  --border-color: green;
+  --font-size: ;
+}

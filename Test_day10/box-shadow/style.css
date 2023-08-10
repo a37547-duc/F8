@@ -1,0 +1,23 @@
+/* Box-shadow */
+/* body {
+} */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+  box-shadow: 5px 5px 50px;
+}
+
+/* .heading {
+  text-shadow: -1px -1px 5px;
+} */
+
+.menu {
+  list-style: none;
+  display: flex;
+}
+.menu a {
+  padding: 10px;
+  color: black;
+  /* list-style: none; */
+}

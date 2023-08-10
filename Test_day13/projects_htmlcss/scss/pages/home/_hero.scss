@@ -1,0 +1,66 @@
+%section-base {
+  color: $textColor;
+  font-family: $font;
+}
+
+.hero-section {
+  overflow: hidden;
+  .hero {
+    display: flex !important;
+    align-items: center;
+    .hero-content {
+      h2 {
+        @extend %section-base;
+        font-weight: 800;
+        font-size: 3.6rem;
+        line-height: 1.6;
+        display: inline-block;
+      }
+      h1 {
+        @extend %section-base;
+        font-weight: 800;
+        font-size: 4.3rem;
+        text-transform: uppercase;
+        width: 70%;
+        line-height: 1.4;
+        margin-bottom: 27.67px;
+      }
+      p {
+        @extend %section-base;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 1.25;
+        width: 500px;
+      }
+    }
+
+    // Link xử lý Breaking container https://css-tricks.com/fun-viewport-units/
+    .hero-img {
+      position: relative;
+      width: 50vw;
+      max-width: 50vw;
+      height: 708px;
+      background-color: $backgroundColor;
+      margin-right: calc(50% - 50vw);
+      border-radius: 16px;
+      z-index: -1;
+      span {
+        @extend %section-base;
+        position: absolute;
+        font-size: 16.6rem;
+        font-weight: 800;
+        opacity: 0.15000000596046448;
+        color: #216000;
+        transform: rotate(90deg);
+        left: 40%;
+        line-height: 1;
+        top: 20%;
+      }
+      img {
+        position: absolute;
+        left: -22%;
+        top: -5%;
+      }
+    }
+  }
+}

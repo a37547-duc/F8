@@ -1,0 +1,40 @@
+/* 
+:hover
+:active
+:focus
+ */
+
+/* trỏ chuột vào, di chuyển ra */
+/* .title:hover {
+  color: blue;
+} */
+
+/* chạm sử dụng trên các thiết bị di động */
+/* .title:active {
+  color: green;
+} */
+
+/* focus chỉ tồn tại trong form */
+/* .btn:focus,
+.field-item:focus {
+  background: blueviolet;
+}
+
+.play-btn {
+  text-decoration: none;
+  color: black;
+}
+.play-btn:focus {
+  border: 1px solid black;
+} */
+/* Nếu muốn tab theo thứ tự thì nên thêm tabindex */
+
+/* disabled thường dùng với form */
+/* .item:disabled {
+  display: none;
+} */
+
+/* Bôi đỏ các sản phẩm ko có active */
+.products h2:not(.active):not(.first) {
+  color: red;
+}

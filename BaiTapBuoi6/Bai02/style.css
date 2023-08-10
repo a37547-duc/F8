@@ -41,7 +41,7 @@ a {
 .list-top {
   margin-top: -20px;
   /* border: 1px solid black; */
-  text-align: start;
+  /* text-align: start; */
   width: 350px;
   height: auto;
   margin-bottom: 20px;
@@ -55,8 +55,8 @@ a {
   background-color: aquamarine;
   font-size: 30px;
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;

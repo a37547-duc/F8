@@ -1,0 +1,32 @@
+/* Không 1 web nào sử dụng time new roman */
+/* body {
+  font-family: Tahoma, Arial;
+} */
+/* để 2 font chữ để cái đầu tiên bị lỗi thì cái thứ 2 hoạt động */
+
+/* Nạp trên google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap rel=stylesheet");
+
+/* Nạp font */
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Light.ttf");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/OpenSans-Bold.ttf");
+  font-weight: 700;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* sans-serif là phông không chân,serif là phông có chân 
+2 phông là mặc định trình duyệt
+*/

@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.title {
+  color: green;
+  position: relative;
+  overflow: hidden;
+}
+.title > span {
+  color: red;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+.title > span > span {
+  position: absolute;
+  bottom: 0;
+}

@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  margin: 50px auto;
+  width: 370px;
+  height: 320px;
+  border: 1px solid black;
+  padding-left: 20px;
+}
+
+.box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 10px;
+  shape-outside: circle(50%);
+}

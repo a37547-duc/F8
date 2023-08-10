@@ -1,0 +1,10 @@
+/* EX01 chọn tất cả các thẻ html trong 1 trang */
+/* * {
+  border: 1px solid red;
+} */
+
+/* EX02 chọn tất cả các thẻ html là con của products */
+
+.products > * {
+  border: 1px solid red;
+}

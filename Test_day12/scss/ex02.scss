@@ -1,0 +1,126 @@
+@import "./parts/mixin";
+/* 
+Kế thừa trong SCSS
+
+1.extend
+
+@extend selector
+
+2.placeholder
+- Trong placeholder chỉ có thuộc tính và values
+- Những đoạn code css nào dùng nhiều thì nhóm vào placeholder
+- Mixin gọi ở đâu thì đoạn code hiển thị ở đó
+- Định nghĩa placeholder
+
+%tenplaceholder {
+    thuoctinh1: value1;
+    thuoctinh2: value2;
+}
+
+- Gọi placeholder
+@extend %tenplaceholder
+
+3. mixin
+-- Nên tạo 1 tách thành 1 file khác
+3.1 mixin Không có tham số
+
+@mixin tenmixin{
+    // Nội dung mixin
+}
+
+3.2 mixin có tham số
+
+@mixin tenmixin($thamso1, $thamso2,.....)
+{
+    //Nội dung mixin
+}
+
+- Gọi mixin
+@include tenmixin
+
+@include tenmixin(doiso1, doiso2,....)
+
+*/
+
+// Ví dụ post và products đều có padding và border
+// .box {
+//   padding: 30px 0;
+//   border: 1px solid black;
+// }
+// .post {
+//   background: gray;
+//   @extend .box;
+// }
+// .products {
+//   background: rebeccapurple;
+//   @extend .box;
+// }
+// Tuy nhiên trường hợp này có nhược điểm là sinh ra class box không để làm gì cả
+// mà ta chỉ muốn lấy code của nó
+// .box {
+//   padding: 30px 0;
+//   border: 1px solid black;
+//   .children {
+//     padding: 20px;
+//   }
+// }
+//   1 Nhược điểm nữa là nếu trong box có các lớp con,
+// thì các lớp sử dụng extend cũng khai báo nó
+///////////////////////////////////////////////////////////////////////////////////
+
+// Cách sử dụng đúng extend
+// .menu {
+//   li {
+//     a {
+//       display: block;
+//       &.active {
+//         color: green;
+//       }
+//       &:hover {
+//         @extend .active;
+//       }
+//     }
+//   }
+// }
+// active thường để chung với trang chủ
+
+/////////////////////////////////////////
+// 2. placeholder
+//vd:
+// %section-base {
+//   padding: 30px 0;
+//   border: 1px solid black;
+// }
+// .post {
+//   background: gray;
+//   @extend %section-base;
+// }
+// .products {
+//   background: rebeccapurple;
+//   @extend %section-base;
+// }
+
+/////////////////////////////////////////
+// 3. mixin
+
+// VD: KHÔNG THAM SỐ
+// .container {
+//   background: gray;
+//   @include center;
+//   @include background;
+// }
+
+// VD: CÓ THAM SỐ
+.container {
+  background: gray;
+  //   @include center(100px, 30px);
+}
+.products {
+  //   @include position(bl, 100px, 50px);
+
+  @include center(text);
+  div {
+    width: 200px;
+    border: 1px solid black;
+  }
+}

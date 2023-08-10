@@ -1,0 +1,31 @@
+.content {
+  color: rgb(11, 88, 41);
+}
+/* color
+-Tên màu
+rbg()
+hsl
+hexa
+=>color picker */
+/* .box {
+  color: rgba(11, 88, 41, 0.63);
+} */
+
+/* 2 Gía trị kế thừa 
+inherit => kế thừa từ thành phần cha trực tiếp
+
+initial => kế thừa mặc định trình duyệt*/
+/* Tất cả các thuộc tính trong css đều có 2 giá trị này 
+Chỉ áp dụng với text*/
+body {
+  color: green;
+}
+.content {
+  color: red;
+}
+.content p {
+  color: inherit;
+}
+.content p:hover {
+  color: initial;
+}

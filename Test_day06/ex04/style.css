@@ -1,0 +1,15 @@
+.image {
+  width: 400px;
+  height: 800px;
+  border: 1px solid red;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* .image img {
+  max-width: 300px;
+  width: 500px;
+} */
+/* max-width và min-width sẽ chặn đầu và đuôi */

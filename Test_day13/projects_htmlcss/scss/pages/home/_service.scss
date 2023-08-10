@@ -1,0 +1,94 @@
+%section-service-base {
+  color: $textColor;
+  font-family: $font;
+}
+%service-items-container {
+  position: absolute;
+  width: 235px;
+  height: 235px;
+  border-radius: 50%;
+}
+
+.service-section {
+  margin-top: 10%;
+  .service-wrapper-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      @extend %section-service-base;
+      text-align: center;
+      font-size: 3.3rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+    }
+    p {
+      @extend %section-service-base;
+      font-size: 1.6rem;
+      text-align: center;
+      font-weight: 400;
+      line-height: 1.25;
+    }
+  }
+  .service-wrapper-items {
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+    gap: 21.67px;
+    .service-items-container {
+      background-color: white;
+      box-shadow: -5.8333330154418945px 8.333333015441895px 72.5px 0px
+        rgba(54, 54, 54, 0.12);
+      border-radius: 3.33px;
+      width: 350px;
+      height: 337px;
+      .service-items {
+        margin: 33.33px;
+        img {
+          background: $orange-100;
+          padding: 19.67px;
+          border-radius: 10px;
+        }
+        h3 {
+          font-size: 4.3rem;
+          font-weight: 800;
+          margin: 30px 0;
+        }
+        span {
+          font-size: 20px;
+          font-weight: 400;
+        }
+      }
+      &:nth-child(1) {
+        position: relative;
+        &::before {
+          content: "";
+          @extend %service-items-container;
+          top: -35%;
+          left: -35%;
+          z-index: -1;
+          background-color: $green-200;
+        }
+      }
+      &:nth-child(3) {
+        position: relative;
+        &::before {
+          content: "";
+          @extend %service-items-container;
+          top: 65%;
+          left: 65%;
+          z-index: -1;
+          background-color: $orange-200;
+        }
+      }
+    }
+  }
+}
+.scale {
+  scale: 1.16;
+  margin: 0 21.67px;
+  img {
+    background-color: $green-100 !important;
+  }
+}

@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  border: 1px solid red;
+}
+
+.first {
+  margin-bottom: -10px;
+}
+.last {
+  margin-top: 20px;
+}
+/* margin collap */
+/* Chỉ margin 1 chiều thành phần nào lớn hơn thì được lấy */
+/* Nếu 1 âm, 1 dương thì nó cộng nhau lại */
+
+.banner {
+  background: green;
+  color: aliceblue;
+  display: flex;
+  width: 100%;
+}
+.banner h1 {
+  margin: 20px 0;
+  padding: 20px;
+  border: 2px solid royalblue;
+}

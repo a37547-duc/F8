@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.product {
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.product .image {
+  position: relative;
+}
+.product img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product .sale {
+  background: red;
+  color: white;
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.product .product-info {
+  padding: 5px 10px;
+}
+
+/* .product .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgb(201, 52, 52);
+  display: none;
+}
+.product:hover .overlay {
+  display: block;
+} */

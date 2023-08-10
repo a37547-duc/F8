@@ -1,0 +1,49 @@
+/* Chọn thẻ p nằm sau thẻ h2 */
+/* .box h2 ~ p {
+  color: red;
+}
+
+box h2 ~ div p {
+  color: red;
+}
+ */
+
+/* Vì nó cùng chung kiểu style nên ta sử dụng selector kết hợp */
+/* .box h2 ~ p,
+.box h2 ~ div p {
+  color: red;
+} */
+
+/* EX2 */
+/* Tìm h2 nào nằm sau thẻ p chỉ h2 nằm liền sau */
+/* .box p + h2 {
+  color: red;
+} */
+/* EX 03 */
+/* Chọn 1 thẻ h2 mà nó nằm sau thẻ h2 khác mà thẻ h2 đó lại nằm sau thẻ p nằm trong 1 thẻ class box  */
+/* .box p + h2 + h2 {
+  color: red;
+} */
+/* Ex 04 */
+/* Chọn hoàng an 1 và hoàng an 2 */
+/* .box p + h2,
+.box p + h2 + h2 {
+  color: red;
+} */
+/* Ex 05 */
+/* Chọn thẻ Hoàng an 2 và 3 */
+/* .box h2 + h2 {
+  color: red;
+} */
+
+/* Ex 06 */
+/* trong các thẻ html có các state 
+ :hover
+ :active
+ :checked ,...
+ */
+/* Trong radio và checkbox có checked 
+vd khi radio được check thì cái checked sẽ được kích hoạt*/
+.todos input:checked ~ span {
+  color: blueviolet;
+}

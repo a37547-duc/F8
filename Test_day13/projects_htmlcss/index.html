@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Link Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Link grid -->
+    <link rel="stylesheet" href="./css/grid.css" />
+    <!-- Link css -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-4 menu-toggle">
+            <label for="menu-toggle">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+          </div>
+          <div class="col-4 col-lg-2">
+            <div class="logo">
+              <a href="#">
+                <img src="./images/logo/logo.png" alt="" />
+              </a>
+              <!-- Bọc thẻ a ra ngoài vì thường bấm vào icon để về trnag chủ -->
+            </div>
+            <!-- End .loggo -->
+          </div>
+
+          <div class="col-4 col-lg-10">
+            <div class="header-nav">
+              <input type="checkbox" id="menu-toggle" hidden />
+              <label class="menu-overlay" for="menu-toggle"></label>
+              <nav class="menu">
+                <ul>
+                  <li class="active"><a href="#">Trang chủ</a></li>
+                  <!-- Mặc định active trang chủ -->
+                  <!-- Điều này là quan trọng bởi vì khi bạn đang ở menu nào
+                thì màu menu đó được đổi -->
+                  <li><a href="#">Về Greenshop</a></li>
+                  <li><a href="#">Sản phẩm</a></li>
+                  <li><a href="#">Tin tức</a></li>
+                  <li><a href="#">Liên hệ</a></li>
+                </ul>
+              </nav>
+              <!-- End .menu -->
+
+              <div class="cart-icon">
+                <a href="#">
+                  <img src="./images/icons/cart.svg" alt="" />
+                  <span>3</span>
+                  <!-- để span là số 3 vì:  -->
+                </a>
+              </div>
+              <!-- End .cart-icon -->
+
+              <div class="search-icon">
+                <img src="./images/icons/search.svg" alt="" />
+              </div>
+            </div>
+            <!-- End .header-nav -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End .header -->
+
+    <!-- Khối màu xanh để 50vw -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="row hero">
+          <div class="col-xxl-6">
+            <div class="hero-content">
+              <h2>GreenChop: Tiện gấp dễ gắp</h2>
+              <h1>an toàn hơn giữa mùa covid</h1>
+              <p>
+                GreenChop là sản phẩm đũa thay đầu duy nhất trên thị trường hiện
+                tại. Sản phẩm cho phép người dùng tháo lắp và thay mới đầu đũa
+                100% trong mỗi bữa ăn. Nhờ đó, GreenChop giúp ngăn ngừa khả năng
+                lây lan dịch bệnh và đảm bảo an toàn cho người dùng.
+              </p>
+            </div>
+          </div>
+          <div class="col-xxl-6">
+            <div class="hero-img">
+              <span>GREEN <br />CHOP</span>
+              <img src="./images/images/hero-image.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE -->
+    <section class="service-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 service-wrapper-content">
+            <h2>
+              GreenChop: Giữ an toàn trong từng <br />
+              bữa ăn của người Việt
+            </h2>
+            <p>
+              Với sự tinh tế trong việc thấu hiểu hành vi của khách hàng cùng ý
+              tưởng đột phá, <br />
+              GreenChop đã trở thành sản phẩm không thể thiếu trong mọi bữa ăn
+              mùa dịch tại <br />
+              các nhà hàng, khách sạn, quán ăn...
+            </p>
+          </div>
+          <div class="col-12 service-wrapper-items">
+            <div class="service-items-container">
+              <div class="service-items">
+                <div class="service-items-img">
+                  <img src="./images/icons/quality-white.svg" alt="" />
+                </div>
+                <h3>1000+</h3>
+                <span>Hộ gia đình tin dùng GreenChop</span>
+              </div>
+            </div>
+
+            <div class="service-items-container scale">
+              <div class="service-items">
+                <div class="service-items-img">
+                  <img src="./images/icons/quality-white.svg" alt="" />
+                </div>
+                <h3>600+</h3>
+                <span>Nhà hàng đã phục vụ GreenChop cho thực khách</span>
+              </div>
+            </div>
+
+            <div class="service-items-container">
+              <div class="service-items">
+                <div class="service-items-img">
+                  <img src="./images/icons/quality-white.svg" alt="" />
+                </div>
+                <h3>20+</h3>
+                <span
+                  >Tỉnh thành được <br />
+                  GreenChop phủ sóng</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+  </body>
+</html>

@@ -1,0 +1,35 @@
+.title::before {
+  content: "<";
+}
+.title::after {
+  content: ">";
+}
+/* Có thể sử dụng content để lấy dữ liệu html vào */
+.sub-title::before {
+  content: attr(data-name);
+}
+/* data là thành phần mình tự định nghĩa */
+
+/* Ex 02 thành phần giả sử dụng first-line */
+.content p::first-line {
+  color: red;
+}
+/* Ex 03 thành phần giả sưt dụng first-letter */
+.content p::first-letter {
+  font-size: 2rem;
+  font-style: italic;
+}
+
+/* Ex 04 Bôi đen sử dụng selection */
+.content p::selection {
+  background: black;
+  color: yellow;
+}
+
+/* Ex 05 đổi màu thuộc tính placeholder */
+.fullname {
+  color: red;
+}
+.fullname::placeholder {
+  color: currentColor;
+}

@@ -1,0 +1,11 @@
+/* nằm bên ngoài border, vẫn tỷ lệ theo width cha */
+
+.box {
+  border: 1px solid rebeccapurple;
+  width: 350px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+/* Thuộc tính inline không đặt đc margin top và bottom */

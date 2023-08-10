@@ -1,0 +1,52 @@
+/* 
+Vòng lặp for through
+=> xác định số lần lặp đã biết trước
+*/
+// $number: 12;
+// $count: $number;
+// @for $i from 0 through $number - 1 {
+//   //Chạy đi chạy lại $number lần
+//   .col-#{$number - $i} {
+//     --column-size: #{$count - $i};
+//   }
+// }
+
+// ĐẾM SỐ LƯỢNG PHẦN TỬ SỬ DỤNG LENGTH
+
+// $sizes: 40, 60, 80, 100;
+// $length: length($sizes);
+// $index: 0;
+// @each $size in $sizes {
+//   $index: $index + 1;
+//   .col-#{$size} {
+//     @if ($index==$length) {
+//       max-width: #{$size}px;
+//     } @else {
+//       width: #{$size}px;
+//     }
+//   }
+// }
+
+////////////////////////////////////////////
+
+// $sizes: (small, 40), (medium, 60), (large, 80);
+// @each $name, $size in $sizes {
+//   .col-#{$name} {
+//     width: #{$size};
+//   }
+// }
+// CÁCH VIẾT KHÁC
+// $sizes: small 40, medium 60, larger 80;
+
+// CÁCH VIẾT KHÁC
+// chia key và value
+$sizes: (
+  small: 50,
+  medium: 60,
+  large: 80,
+);
+@each $name, $size in $sizes {
+  .col-#{$name} {
+    width: #{$size};
+  }
+}

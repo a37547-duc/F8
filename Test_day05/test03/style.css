@@ -1,0 +1,7 @@
+/* 1.5*19 
+line-height không nên sử dụng giá trị  tuyệt đối*/
+body {
+  font-size: 2rem;
+  /* line-height: 20px; */
+  line-height: 1.5;
+}

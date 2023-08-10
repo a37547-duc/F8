@@ -1,0 +1,80 @@
+img {
+  width: 200px;
+  height: 200px;
+}
+/*div {
+  height: 200px;
+  width: 200px;
+  background-color: orange;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border: 1px solid transparent;
+  box-shadow: 0 0 0 1px #202539, inset 0 0 0 1px #3966dd;
+  transition: all 0.2s linear;
+  z-index: 2;
+}
+div:hover {
+  box-shadow: 0 0 0 1px #202539, inset 0 0 0 8px #3966dd;
+  box-shadow: 0 0 0 1px rgba(32, 37, 57, 0.5),
+    inset 0 0 0 8px rgba(90, 221, 57, 0.5);
+} */
+/* Thiết lập các kích thước cho border */
+/* Thiết lập các kích thước cho border */
+.outer-border {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #3966dd;
+  overflow: hidden; /* Để ẩn bớt hiệu ứng hover của inner-border */
+  background-color: #ffffff; /* Màu nền mặc định */
+  background-image: url("https://th.bing.com/th/id/R.e1707c345d5ac10c80a674030e606643?rik=pOsTg5KBoLuNvw&riu=http%3a%2f%2fwww.snut.fr%2fwp-content%2fuploads%2f2015%2f08%2fimage-de-paysage.jpg&ehk=1O5SWKkGpZ8yU%2b%2fAnLXG1v8k6BKxgyiXgHbOWBW1ir0%3d&risl=1&pid=ImgRaw&r=0"); /* Đường dẫn của ảnh */
+  background-size: cover;
+  background-position: center;
+}
+
+.outer-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    57,
+    102,
+    221,
+    0
+  ); /* Màu nền với độ trong suốt 0 (trong suốt hoàn toàn) */
+  transition: background-color 0.3s ease; /* Thêm transition để tạo hiệu ứng mềm mại cho màu nền */
+}
+
+.inner-border {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border: 2px solid #202539;
+  transition: all 0.3s ease; /* Thêm transition để tạo hiệu ứng mềm mượt cho việc thu nhỏ */
+}
+
+/* Hiệu ứng hover */
+.outer-border:hover::before {
+  background-color: rgba(
+    57,
+    102,
+    221,
+    0.5
+  ); /* Màu xanh với độ trong suốt 0.5 */
+}
+
+.outer-border:hover .inner-border {
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+}

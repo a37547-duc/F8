@@ -1,0 +1,26 @@
+/* width , height chỉ hoạt động với thẻ block */
+/* .box {
+  width: 200px;
+  height: 100vw;
+  background: green;
+} */
+/* vd thẻ span là thẻ inline */
+/* span {
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  display: block;
+} */
+/* .container {
+  border: 1px solid red;
+  width: 400px;
+} */
+/* Tìm hiểu về vw, vh */
+/* vw = viewpoint width
+   vh = viewpoint height */
+.img {
+  width: 800px;
+  height: 800px;
+}
+/* Tại sao thẻ img lại css được width và height */
+/*  */

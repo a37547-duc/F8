@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.songs {
+  width: 300px;
+  margin: 40px;
+  border: 1px solid black;
+  counter-reset: song-item;
+}
+.songs .item {
+  padding: 10px 20px;
+  border-bottom: 1px solid black;
+  counter-increment: song-item;
+}
+.songs .item::before {
+  content: counter(song-item);
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: greenyellow;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 5px;
+}
+/* Tạo bộ đếm
+1. khởi tạo bộ đếm
+2. đếm
+3. gọi bộ đếm vào before, after */
+
+.songs .children {
+  counter-reset: song-children;
+}
+.songs .children .item {
+  counter-increment: song-children;
+  padding-left: 40px;
+}
+.songs .children .item::before {
+  content: "#" counter(song-item) "." counter(song-children);
+}
