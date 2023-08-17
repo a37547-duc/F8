@@ -1,46 +1,60 @@
-// var welcome = 20;
-// var getMessage = function (msg) {
-//   console.log(`getMessage`);
+//Thứ tự tìm hiểu anonymous functions, scope and closures
+// thunk javascript
+// kỹ thuật debounce
+// // event handel
 
-//   var a = 10; // biến cục bộ hàm cha
-//   // Định nghĩa hàm con
+// // Biến toàn cục
+// var welcome = "Hoàng an f8";
+
+// var getMesage = function (msg) {
+//   console.log(`getMessage ${msg}`);
+
+//   var a = 10; // Biến toàn cục của hàm cha
+
+//   // định nghĩa hàm còn
 //   var display = function () {
-//     console.log(msg);
-//     console.log(a);
-//     console.log(`${welcome}`);
-//     var fake = 20;
+//     console.log(`Xin chào ${msg}`);
+//     console.log(`a=${a}`);
+//     console.log(`welcome=${welcome}`);
+//     // gọi hàm còn
+//     display();
 //   };
-//   // Gọi hàm con
-//   display();
 // };
+// getMesage("F8");
 
-// getMessage("F8");
+//////////////////////////////////////////////////
 
+// Kỹ thuật Closure
 var sum = function (a) {
   return function (b) {
     return a + b;
   };
 };
+
 /*
-Cần thực hiện 3 phép tính
-10+5
-10+20
-10+30
+Cần thực hiện 3 phép toán:
+10+ 5
+10+ 20
+10 + 30
 */
 var add = sum(10); // return function
 console.log(add(5));
 console.log(add(20));
-// closure
+console.log(add(30));
+
+//////////////////////////////////////////////////
 
 //setTimeout
 // setTimeout(
-//     function(name,email){
-//         console.log(`Xin chao f8`, name, email);
-//     }, 2000, "Hoàng an f8"
-// )
+//   function (name) {
+//     console.log(`Xin chao f8`, name);
+//   },
+//   2000,
+//   "Hoảng an f8"
+// );
 
-//setInterval => Lặp đi lặp lại sau 1 khoảng thời gian
-
+//setInterval
+// Thường áp dụng để xây dụng bộ đếm
 // var count = 0;
 // var id = setInterval(function () {
 //   console.log(++count);
@@ -49,23 +63,27 @@ console.log(add(20));
 //   }
 // }, 1000);
 
-// Đệ quy
-// var showNumber = function (n) {
-//   console.log(n);
-//   if (n > 1) {
-//     showNumber(n - 1);
-//   }
-// };
-// showNumber(10);
+//////////////////////////////////////////////////
 
-// Tính tổng s=1+2+3+4
-var sum = function (n) {
+// Đệ Quy
+var showNumbers = function (n) {
+  console.log(n);
+  if (n > 1) {
+    showNumbers(n - 1);
+  }
+};
+showNumbers(10);
+
+// Tính tổng S=1+2+3+...n
+var Total = function (n) {
   if (n === 1) {
     return 1;
   }
-  //   return 1 / sum(n - 1) + 1 / sum(n - 2);
+  return n + Total(n - 1);
 };
-console.log(sum(2));
+console.log(Total(10));
+
+// fibonaci
 
 var fibonaci = function (n) {
   if (n === 1 || n === 2) {
@@ -73,4 +91,4 @@ var fibonaci = function (n) {
   }
   return fibonaci(n - 1) + fibonaci(n - 2);
 };
-console.log(fibonaci(20));
+console.log(fibonaci(10));
