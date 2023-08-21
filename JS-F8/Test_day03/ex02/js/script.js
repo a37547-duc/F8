@@ -171,6 +171,7 @@ console.log("   Hoàng an F8 ".trim());
 
 // 15. match() => Cắt chuỗi dựa vào Regex
 
+// 16. toString() =>chuyển đổi một đối tượng thành một chuỗi biểu diễn dưới dạng chuỗi ký tự
 var content = `Lorem Ipsum is 0563535506 simply dummy text of the printing
  and typesetting industry. 
 Lorem Ipsum has been the industry's standard dummy 
