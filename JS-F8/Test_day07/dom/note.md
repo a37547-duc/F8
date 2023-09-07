@@ -11,3 +11,17 @@
 ## DOM Navigation: Tương tác với các element theo dạng phân cấp cha con
 
 ## DOM Node: Thao tác với các thẻ HTML thông qua Object
+
+//////////////////////////////////////////////////////////////////////////////////
+
+# HTML DOM
+
+Có 3 thành phần
+
+1. Element
+   - vd: thẻ a, h1, h2,...
+2. Atribute
+   - vd: href,
+3. Text
+
+# Node

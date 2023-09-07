@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn {
+  position: absolute;
+  top: 0;
+  width: 30%;
+  height: 30%;
+  border-radius: 4%;
+  border: 1px solid black;
+}
