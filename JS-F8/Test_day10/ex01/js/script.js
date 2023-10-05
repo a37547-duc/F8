@@ -30,3 +30,13 @@ var menuList = menu.children;
 console.log(menuList);
 console.log(menu.children[1].children[1].children[0].innerText);
 // children trả về 1 danh sách các cấp gần với nó nhất
+
+var itemList = menu.querySelectorAll("li");
+
+itemList.forEach(function (item) {
+  console.log(itemList);
+  // var children = item.children;
+  // if (children.length === 2) {
+  //   item.classList.add("has-children");
+  // }
+});

@@ -3,48 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BaiTap27</title>
-    <style>
-      input {
-        display: block;
-        width: 80%;
-        margin: 0 auto;
-      }
-      button {
-        width: 100%;
-      }
-      .action-btn {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-      }
-      .action-btn button {
-        width: 150px;
-        margin-top: 10px;
-        padding: 8px;
-      }
-    </style>
+    <title>Document</title>
   </head>
   <body>
-    <h2>DANH SACH SAN PHAM</h2>
+    <h2>Danh sách sản phẩm</h2>
     <table
+      cellpadding="0"
+      cellspacing="0"
       width="100%"
       border="1"
-      cellpadding="1"
-      cellspacing="1"
-      class="product-table"
+      class="products"
     >
-      <tr>
-        <th>STT</th>
-        <th>Ten san pham</th>
-        <th>Gia</th>
-        <th width="15%">THem vao gio hang</th>
-      </tr>
+      <thead>
+        <tr>
+          <th width="5%">STT</th>
+          <th>Tên sản phẩm</th>
+          <th width="10%">Giá</th>
+          <th width="10%">Thêm vào giỏ</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- <tr>
+          <td>1</td>
+          <td>Sản phẩm 1</td>
+          <td>1000</td>
+          <td>
+            <input
+              type="number"
+              value="1"
+              style="width: 90%; display: block; margin: 0 auto"
+            /><button type="button" style="width: 100%">Thêm vào giỏ</button>
+          </td>
+        </tr> -->
+      </tbody>
     </table>
+
     <!--  -->
-    <h2>GIO HANG</h2>
-    <div class="cart-data"></div>
-    <!-- Scripts -->
+    <h2>GIỞ HÀNG</h2>
+    <div class="carts">
+      <!-- table tự tạo - Tạo ra bằng DOM Node -->
+      <!-- <table cellpadding="0" cellspacing="0" width="100%" border="1">
+        <thead>
+          <tr>
+            <th width="5%">STT</th>
+            <th>Tên sản phẩm</th>
+            <th width="20%">Giá</th>
+            <th width="20%">Số lượng</th>
+            <th width="20%">Thành tiền</th>
+            <th width="5%">Xoá</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Sản phẩm 1</td>
+            <td>1000</td>
+            <td>
+              <input type="number" class="quantity" data-id="1" value="1" />
+            </td>
+            <td>1000</td>
+            <td><button type="button" class="delete-item">Xoá</button></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td colspan="3">Tổng</td>
+            <td>1</td>
+            <td colspan="2">1000</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+      <button type="button" id="update_cart">Cập nhật giỏ hàng</button>
+      <button type="button" id="delete_cart">Xoá giỏ hàng</button> -->
+    </div>
     <script src="./js/script.js"></script>
   </body>
 </html>
